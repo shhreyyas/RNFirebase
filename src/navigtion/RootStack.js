@@ -7,7 +7,6 @@ import MainSplash from '../features/splash';
 import SignIn from '../features/auth/signIn';
 import SignUp from '../features/auth/signUp';
 
-
 const RootStack = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -18,8 +17,16 @@ const RootStack = () => {
           component={MainSplash}
           options={{headerShown: false}}
         />
-        <Stack.Screen name={SIGNIN} component={SignIn} />
-        <Stack.Screen name={SIGNUP} component={SignUp} />
+        <Stack.Screen
+          name={SIGNIN}
+          component={SignIn}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={SIGNUP}
+          component={SignUp}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
