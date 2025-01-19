@@ -1,14 +1,14 @@
 import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
 import Images from '../../assets/images';
-import { SIGNIN } from '../../navigtion/ScreenName';
+import { SIGNIN, SIGNUP } from '../../navigtion/ScreenName';
 
 const MainSplash = props => {
   const {navigation} = props;
 
   useEffect(() => {
     setTimeout(() => {
-       navigation.replace(SIGNIN);
+       navigation.replace(SIGNUP);
     }, 2000);
   }, [navigation]);
 
